@@ -6,7 +6,7 @@
 
 ```hcl
 module "efs" {
-    source = "github.com/pbs/terraform-aws-efs-module?ref=0.0.2"
+    source = "github.com/pbs/terraform-aws-efs-module?ref=x.y.z"
 }
 ```
 
@@ -22,7 +22,7 @@ Integrate this module like so:
 
 ```hcl
 module "efs" {
-  source = "github.com/pbs/terraform-aws-efs-module?ref=0.0.2"
+  source = "github.com/pbs/terraform-aws-efs-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
@@ -46,7 +46,7 @@ module "efs" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.0.2`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -79,6 +79,7 @@ No modules.
 
 | Name | Type |
 |------|------|
+| [aws_efs_backup_policy.policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/efs_backup_policy) | resource |
 | [aws_efs_file_system.efs](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/efs_file_system) | resource |
 | [aws_efs_mount_target.mount_target](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/efs_mount_target) | resource |
 | [aws_security_group.sg](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/security_group) | resource |
@@ -93,6 +94,7 @@ No modules.
 | <a name="input_organization"></a> [organization](#input\_organization) | Organization using this module. Used to prefix tags so that they are easily identified as being from your organization | `string` | n/a | yes |
 | <a name="input_product"></a> [product](#input\_product) | Tag used to group resources according to product | `string` | n/a | yes |
 | <a name="input_repo"></a> [repo](#input\_repo) | Tag used to point to the repo using this module | `string` | n/a | yes |
+| <a name="input_backup_policy"></a> [backup\_policy](#input\_backup\_policy) | The backup policy to use for the EFS file system. Valid values: ENABLED, DISABLED. | `string` | `"ENABLED"` | no |
 | <a name="input_creation_token"></a> [creation\_token](#input\_creation\_token) | The creation token used for the EFS file system | `string` | `null` | no |
 | <a name="input_is_encrypted"></a> [is\_encrypted](#input\_is\_encrypted) | Boolean indicating if the EFS should be encrypted or not. Default is true | `bool` | `true` | no |
 | <a name="input_kms_key_id"></a> [kms\_key\_id](#input\_kms\_key\_id) | The ID for the KMS key to use for encryption. | `string` | `null` | no |

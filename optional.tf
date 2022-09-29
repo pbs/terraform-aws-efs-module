@@ -58,3 +58,13 @@ variable "creation_token" {
   type        = string
   default     = null
 }
+
+variable "backup_policy" {
+  description = "The backup policy to use for the EFS file system. Valid values: ENABLED, DISABLED."
+  type        = string
+  default     = "ENABLED"
+  validation {
+    condition     = contains(["ENABLED", "DISABLED"], var.backup_policy)
+    error_message = "The backup_policy variable must be either ENABLED or DISABLED."
+  }
+}
