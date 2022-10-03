@@ -6,7 +6,7 @@
 
 ```hcl
 module "efs" {
-    source = "github.com/pbs/terraform-aws-efs-module?ref=x.y.z"
+    source = "github.com/pbs/terraform-aws-efs-module?ref=0.1.0"
 }
 ```
 
@@ -22,7 +22,7 @@ Integrate this module like so:
 
 ```hcl
 module "efs" {
-  source = "github.com/pbs/terraform-aws-efs-module?ref=x.y.z"
+  source = "github.com/pbs/terraform-aws-efs-module?ref=0.1.0"
 
   # Tagging Parameters
   organization = var.organization
@@ -46,7 +46,7 @@ module "efs" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`x.y.z`
+`0.1.0`
 
 Note, however that subtrees can be altered as desired within repositories.
 
