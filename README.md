@@ -7,7 +7,7 @@
 Use this URL for the source of the module. See the usage examples below for more details.
 
 ```hcl
-github.com/pbs/terraform-aws-efs-module?ref=0.1.20
+github.com/pbs/terraform-aws-efs-module?ref=x.y.z
 ```
 
 ### Alternative Installation Methods
@@ -22,7 +22,7 @@ Integrate this module like so:
 
 ```hcl
 module "efs" {
-  source = "github.com/pbs/terraform-aws-efs-module?ref=0.1.20"
+  source = "github.com/pbs/terraform-aws-efs-module?ref=x.y.z"
 
   # Tagging Parameters
   organization = var.organization
@@ -46,7 +46,7 @@ module "efs" {
 
 If this repo is added as a subtree, then the version of the module should be close to the version shown here:
 
-`0.1.20`
+`x.y.z`
 
 Note, however that subtrees can be altered as desired within repositories.
 
@@ -69,7 +69,7 @@ Below is automatically generated documentation on this Terraform module using [t
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.19.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.20.0 |
 
 ## Modules
 
